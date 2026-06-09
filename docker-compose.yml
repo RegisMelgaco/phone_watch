@@ -1,0 +1,12 @@
+services:
+  twilio-test:
+    build: .
+    container_name: twilio-phone-test
+    env_file: .env
+    environment:
+      TZ: America/Fortaleza
+      CSV_FILE: /app/results/call_results.csv
+    volumes:
+      - ./results:/app/results
+      - ./logs:/var/log
+    restart: unless-stopped
