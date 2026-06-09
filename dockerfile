@@ -14,7 +14,7 @@ ENV UV_SYSTEM_PYTHON=1 \
 COPY requirements.txt .
 RUN uv pip install -r requirements.txt
 
-COPY test_call.py .
+COPY . .
 COPY crontab /etc/cron.d/twilio-test
 COPY entrypoint.sh /entrypoint.sh
 
