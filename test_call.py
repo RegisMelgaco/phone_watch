@@ -95,7 +95,7 @@ def step2_make_call(client: Client):
     log.info("Step 2 – Calling %s …", TEST_NUMBER)
 
     twiml = VoiceResponse()
-    twiml.record(max_length=30, timeout=5, play_beep=False)
+    twiml.record(max_length=16, timeout=5, play_beep=False)
     twiml.hangup()
 
     call = client.calls.create(
